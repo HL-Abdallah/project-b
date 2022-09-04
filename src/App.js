@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import CssBaseline from '@mui/material/CssBaseline';
+import { AppBar, Button, ThemeProvider, Toolbar, Typography } from '@mui/material';
+import { lightTheme } from './styles/myTheme';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={lightTheme}>
+      <CssBaseline />
+      <AppBar position="static" color="transparent">
+        <Toolbar>
+          <Typography variant="h2" sx={{ textDecorationThickness: "bold" }}>
+            Dashboard
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <h1>hello app</h1>
+      <code>time is : {new Date().toLocaleString()}</code>
+      <br />
+      <Button variant="contained">a Button</Button>
+    </ThemeProvider>
   );
 }
 
