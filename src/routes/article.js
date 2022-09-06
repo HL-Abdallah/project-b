@@ -1,6 +1,6 @@
 import React from 'react'
 
-const article = () => {
+const Article = () => {
     return (
         <div>article route</div>
     )

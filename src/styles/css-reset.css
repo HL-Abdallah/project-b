@@ -1,0 +1,14 @@
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+html, 
+body, 
+div#root {
+  width : 100%;
+  height : 100%
+}
