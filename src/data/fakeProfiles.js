@@ -6,7 +6,7 @@ const peoples = [
         isActive: true,
         imageURL: "/dummy-images/elon_musk.jpg",
         dateCreated: new Date().toLocaleDateString(),
-        email: "fake.email.address@gmail.com",
+        email: "elon.musk@tesla.com",
     },
     {
         name: "The Rock",
