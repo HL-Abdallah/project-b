@@ -1,11 +1,14 @@
 import { Avatar, Divider, Paper, Typography, Stack, IconButton, Grid } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import peoples from "../data/fakeProfiles"
-import EditIcon from '@mui/icons-material/Edit';
+import FormDialog from '../components/FormDialog';
 
 const Profil = () => {
 
-  const elon = peoples.filter(p => p.name.startsWith("Elon"))[0];
+  const [elon, Setelon] = useState(peoples.filter(p => p.name.startsWith("Z."))[0]);
+  useEffect(function () {
+  }, [elon]);
+
 
   return (
     <>
@@ -13,6 +16,7 @@ const Profil = () => {
         <TopSection person={elon} />
         <Divider />
         <MiddleSection person={elon} />
+        <FormDialog person={elon} modifyPerson={Setelon} />
       </Paper>
     </>
   )
@@ -32,9 +36,7 @@ const TopSection = ({ person }) => {
             <Typography sx={{ mt: 1 }} variant="subtitle2">{person.location}</Typography>
           </div>
         </Stack>
-        <IconButton sx={{ height: "40px" }}>
-          <EditIcon />
-        </IconButton>
+
       </Stack>
     </>
   )
