@@ -52,7 +52,7 @@ export default function FormDialog({ person, modifyPerson }) {
                         defaultValue={person.email}
                         inputRef={emailRef}
                     />
-                    <SimpleDatePicker defaultValue={person.birthday} inputRef={dateNRef} />
+                    <SimpleDatePicker inputLabel='Birthday' defaultValue={person.birthday} inputRef={dateNRef} />
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose}>Cancel</Button>
