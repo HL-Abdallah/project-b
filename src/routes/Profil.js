@@ -1,4 +1,4 @@
-import { Avatar, Divider, Paper, Typography, Stack, IconButton, Grid } from '@mui/material'
+import { Avatar, Divider, Paper, Typography, Stack, Grid } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import peoples from "../data/fakeProfiles"
 import FormDialog from '../components/FormDialog';
@@ -8,7 +8,6 @@ const Profil = () => {
   const [elon, Setelon] = useState(peoples.filter(p => p.name.startsWith("Z."))[0]);
   useEffect(function () {
   }, [elon]);
-
 
   return (
     <>

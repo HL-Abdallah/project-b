@@ -1,14 +1,13 @@
 import { DataGrid } from "@mui/x-data-grid";
-import events from "../data/fakeEvents";
-import { useState } from 'react'
-import { Chip, Stack, Button, Box } from "@mui/material";
-import {  useNavigate } from "react-router-dom";
+import events from "../../data/fakeEvents";
+import { Chip, Stack, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import EditIcon from '@mui/icons-material/Edit';
 import { GridActionsCellItem } from '@mui/x-data-grid';
 
 const Evenement = () => {
 
-  const [gridRows, setgridRows] = useState(events);
+  const gridRows = events;
   const navigate = useNavigate();
 
   const handleDoubleClick = (params, event, details) => {
@@ -29,9 +28,9 @@ const Evenement = () => {
     {
       field: 'actions',
       type: 'actions',
-      headerName : "Actions",
+      headerName: "Actions",
       getActions: (params) => [
-        <GridActionsCellItem icon={<EditIcon/>} onClick={(p) => navigate(`edit/${params.row.id}`)} label="Edit" />
+        <GridActionsCellItem icon={<EditIcon />} onClick={(p) => navigate(`edit/${params.row.id}`)} label="Edit" />
       ]
     }
   ];
@@ -40,7 +39,7 @@ const Evenement = () => {
       <Stack direction="row" gap={2} sx={{ m: 1, justifyContent: "flex-end" }}>
         <Button variant="contained" color="success">Add Event</Button>
         <Button variant="contained" color="error">Delete Event</Button>
-      </Stack> 
+      </Stack>
       <DataGrid
         checkboxSelection
         rows={gridRows}
