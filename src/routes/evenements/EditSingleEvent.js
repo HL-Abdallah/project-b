@@ -18,7 +18,7 @@ const EditSingleEvent = () => {
 
   return (
     <>
-      <Button onClick={() => navigate("/evenement")}>⬅ GO Back</Button>
+      <Button sx={{ m: 1 }} onClick={() => navigate("/events")}>⬅ GO Back</Button>
       <h1>Edit Event : {event_id}</h1>
       <div>{JSON.stringify(event)}</div>
     </>

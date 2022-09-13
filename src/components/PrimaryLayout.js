@@ -43,7 +43,7 @@ const PrimaryLayout = ({ changeTheme }) => {
                             Dashboard
                         </Typography>
                     </Link>
-                    <Tooltip sx={{ marginLeft: 'auto' }} title={"Thème Clair / Thème Sombre"} arrow>
+                    <Tooltip sx={{ marginLeft: 'auto' }} title={"Dark theme / Light theme"} arrow>
                         <IconButton color="inherit" onClick={() => handleThemeChange()}>
                             {theme.palette.mode === "light" ? <LightModeIcon /> : <DarkModeIcon />}
                         </IconButton>
@@ -60,7 +60,7 @@ const PrimaryLayout = ({ changeTheme }) => {
                 <List
                     subheader={
                         <ListSubheader component="div" id="nested-list-subheader">
-                            Menu De Navigation
+                            Side Navigation Menu
                         </ListSubheader>
                     }
                 >
@@ -70,17 +70,17 @@ const PrimaryLayout = ({ changeTheme }) => {
                                 <ListItemIcon>
                                     <PersonIcon />
                                 </ListItemIcon>
-                                <ListItemText primary="Profil" secondary="Consulter votre profil" />
+                                <ListItemText primary="Profile" secondary="View & edit your profile" />
                             </ListItemButton>
                         </ListItem>
                     </Link>
-                    <Link to='/evenement'>
+                    <Link to='/events'>
                         <ListItem disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
                                     <EventIcon />
                                 </ListItemIcon>
-                                <ListItemText primary="Evénements" secondary="Consulter tout les evénements" />
+                                <ListItemText primary="Events" secondary="View & edit your events" />
                             </ListItemButton>
                         </ListItem>
                     </Link>
@@ -90,17 +90,17 @@ const PrimaryLayout = ({ changeTheme }) => {
                                 <ListItemIcon>
                                     <ArticleIcon />
                                 </ListItemIcon>
-                                <ListItemText primary="Articles" secondary="Consulter tout les articles" />
+                                <ListItemText primary="Articles" secondary="View & edit your articles" />
                             </ListItemButton>
                         </ListItem>
                     </Link>
-                    <Link to='/parametresUtilisateur'>
+                    <Link to='/user-settings'>
                         <ListItem disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
                                     <ManageAccountsIcon />
                                 </ListItemIcon>
-                                <ListItemText primary="Parametres Utilisateurs" secondary="Gérer les comptes utilisateurs" />
+                                <ListItemText primary="Manage Users" secondary="Create, Update, Delete Users" />
                             </ListItemButton>
                         </ListItem>
                     </Link>

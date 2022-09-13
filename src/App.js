@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import PrimaryLayout from './components/PrimaryLayout';
 import SingleEvent from './routes/evenements/SingleEvent';
 import EditSingleEvent from './routes/evenements/EditSingleEvent';
+import NewSingleEvent from './routes/evenements/NewSingleEvent';
 // styles
 import './styles/css-reset.css';
 import { lightTheme } from './styles/myTheme';
@@ -28,11 +29,12 @@ function App() {
         <Routes>
           <Route path='/' element={<PrimaryLayout changeTheme={(e) => setTheme(e)} />}>
             <Route path='article' element={<Article />} />
-            <Route path='evenement' element={<Evenement />} />
-            <Route path="evenement/:event_id" element={<SingleEvent />} />
-            <Route path="evenement/edit/:event_id" element={<EditSingleEvent />} />
+            <Route path='events' element={<Evenement />} />
+            <Route path="events/view/:event_id" element={<SingleEvent />} />
+            <Route path="events/edit/:event_id" element={<EditSingleEvent />} />
+            <Route path="events/new" element={<NewSingleEvent />} />
             <Route path='profile' element={<Profil />} />
-            <Route path='parametresUtilisateur' element={<ParametresUtilisateurs />} />
+            <Route path='user-settings' element={<ParametresUtilisateurs />} />
           </Route>
         </Routes>
       </BrowserRouter>
