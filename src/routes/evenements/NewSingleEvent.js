@@ -1,10 +1,11 @@
 import {
     Paper, StepLabel, Stepper, Step, Typography,
-    IconButton, createTheme, Button, StepContent, TextField
+    createTheme, Button, StepContent, TextField
 } from '@mui/material'
 import React from 'react'
-import AddIcon from '@mui/icons-material/Add';
 import { useNavigate } from 'react-router-dom';
+import NewEventStep1 from './NewEvent_Step1';
+
 
 const NewSingleEvent = () => {
     // Hooks & state
@@ -22,12 +23,9 @@ const NewSingleEvent = () => {
                 marginBottom: theme.spacing(2)
             }}>
                 <Button sx={{ m: 1 }} onClick={() => navigate("/events")}>⬅ GO Back</Button>
-                <Typography variant="h4" ml={2}>
+                <Typography variant="h4" ml={2} sx={{ borderBottom: "2px solid #333" }}>
                     Creating a new event
                 </Typography>
-                <IconButton disableRipple >
-                    <AddIcon />
-                </IconButton>
             </div>
 
             <Stepper
@@ -37,17 +35,17 @@ const NewSingleEvent = () => {
                 <Step>
                     <StepLabel>Basic Information</StepLabel>
                     <StepContent>
-                        <TextField
-                            label="Event Title"
-                            fullWidth
-                        />
+                        <NewEventStep1 />
                     </StepContent>
                 </Step>
                 <Step>
                     <StepLabel>Event Body</StepLabel>
                     <StepContent>
                         <TextField
-                            label="Title"
+                            label="Body"
+                            multiline
+                            rows={12}
+                            fullWidth
                         />
                     </StepContent>
                 </Step>
@@ -67,10 +65,9 @@ const StepSwitcher = ({ activeStep, setActiveStep }) => {
     const theme = createTheme();
 
     return (
-        <div style={{
+        <Paper elevation={4} style={{
             display: "flex",
             justifyContent: "space-between",
-            backgroundColor: theme.palette.grey[100],
             borderRadius: "5px",
             margin: theme.spacing(1),
             padding: theme.spacing(1),
@@ -93,7 +90,7 @@ const StepSwitcher = ({ activeStep, setActiveStep }) => {
                     </Button>)
                     : (<Button>Finish</Button>)}
             </div>
-        </div>
+        </Paper>
     )
 }
 
