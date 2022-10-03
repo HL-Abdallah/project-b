@@ -1,11 +1,15 @@
-## About
+## Simple shopping cart app
+Technologies used : **ReactJS, Material UI v5**.
 
-This is a webapp for a plant business, some of the features are :
+[![Netlify Status](https://api.netlify.com/api/v1/badges/87a7d63d-f7ea-4a05-a2c9-48bf8b5e1ac9/deploy-status)](https://app.netlify.com/sites/plant-business-cms-dashboard/deploys)
 
-- Authentication / Authorization
-- Manage Users
-- Manage Events
-- Manage Articles
+## Deployment
+View the demo live on Netlify : https://plant-business-cms-dashboard.netlify.app/
+
+## Screenshots
+
+![image ](https://i.imgur.com/sJQBPcx.png)
+![image ](https://i.imgur.com/xxGJjUH.png)
 
 ---
 
